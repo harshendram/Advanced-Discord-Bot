@@ -2,6 +2,20 @@ const fs = require('fs');
 const path = require('path');
 const archiver = require('archiver');
 
+/**
+ * 🚀 Pure Code Zip Generator for VAISH Discord Bot
+ * 
+ * This script creates a zip file containing only the essential bot code,
+ * excluding documentation, images, and other non-code files.
+ * 
+ * Usage:
+ *   npm run build-zip
+ *   OR
+ *   node generate-code-zip.js
+ * 
+ * Output: discord-bot-pure-code.zip (ready for distribution)
+ */
+
 // Configuration for what to include/exclude
 const INCLUDE_FILES = [
     'index.js',
