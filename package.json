@@ -7,7 +7,8 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "deploy": "node deploy-commands.js",
-    "test": "node --test"
+    "test": "node --test",
+    "build-zip": "node generate-code-zip.js"
   },
   "keywords": [
     "discord",
@@ -43,6 +44,7 @@
     "node-cron": "^3.0.3"
   },
   "devDependencies": {
+    "archiver": "^7.0.1",
     "nodemon": "^3.0.2"
   },
   "engines": {

