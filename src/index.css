@@ -1,1 +1,130 @@
 @import "tailwindcss";
+
+/* Custom 3D and Animation Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.rotateY-12 {
+  transform: rotateY(12deg);
+}
+
+.rotateY-0 {
+  transform: rotateY(0deg);
+}
+
+/* 3D IconCloud utilities */
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.transform-style-preserve {
+  transform-style: preserve-3d;
+}
+
+/* Enable hardware acceleration for better 3D performance */
+.icon-cloud-container {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.icon-cloud-item {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Text glow effect */
+.text-glow {
+  text-shadow: 0 0 20px rgba(46, 230, 247, 0.6),
+    0 0 40px rgba(46, 230, 247, 0.4);
+}
+
+/* Enhanced Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(30, 30, 47, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2ee6f7, #45b7d1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #1cd3e6, #2ea3c4);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body styling for optimal performance */
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Smooth page transitions */
+* {
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Custom selection */
+::selection {
+  background: rgba(46, 230, 247, 0.3);
+  color: white;
+}
+
+/* Snowfall animations */
+@keyframes snowfall {
+  from {
+    transform: translateY(-100vh) rotate(0deg);
+  }
+  to {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+/* Floating animation for subtle movement */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Hide scrollbar utility class */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
