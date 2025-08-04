@@ -114,10 +114,10 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className={`fixed top-0 left-0 right-0 w-[calc(100%-2rem)] m-4 z-50 transition-all duration-500 px-[7vw] lg:px-[20vw] backdrop-blur-xl rounded-2xl border-2 ${
+        className={`fixed top-0 left-0 right-0 w-[calc(100%-2rem)] m-4 z-50 transition-all duration-500 px-[7vw] lg:px-[20vw] backdrop-blur-xl rounded-2xl border ${
           isScrolled
-            ? "bg-[#0e0e0f] border-[#2ee6f7]"
-            : "bg-[#0e0e0f]/60 border-[#2ee6f7]/60"
+            ? "bg-[#0e0e0f] border-gray-700/70"
+            : "bg-[#0e0e0f]/80 border-gray-700/40"
         }`}
       >
         <div className="text-white h-[10vh] flex items-center justify-between py-5 relative">
