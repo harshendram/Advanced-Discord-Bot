@@ -60,35 +60,31 @@ Built files will be in the `dist/` directory.
 
 ## 🌐 GitHub Pages Deployment
 
-### Method 1: Automatic Deployment (GitHub Actions)
+### Automatic Deployment (GitHub Actions)
 
-The repository includes automated GitHub Actions workflow. Simply push to `main` or `website-branch`:
+The repository includes automated GitHub Actions workflow. Simply push to `website-branch`:
 
 ```bash
 git add .
 git commit -m "Deploy to GitHub Pages"
-git push origin main
+git push origin website-branch
 ```
 
-The site will automatically deploy to: `https://harshendram.github.io/`
+The site will automatically deploy to: `https://harshendram.github.io/Advanced-Discord-Bot/`
 
-### Method 2: Manual Deployment
-
-```bash
-# Build the project
-npm run build
-
-# Deploy to GitHub Pages
-npm run deploy
-```
-
-### Method 3: GitHub Actions Setup
+### GitHub Pages Settings
 
 1. Go to your GitHub repository
 2. Navigate to **Settings** → **Pages**
-3. Under **Source**, select "Deploy from a branch"
-4. Choose **Branch**: `gh-pages`
-5. Click **Save**
+3. Under **Source**, select **GitHub Actions**
+4. The workflow will deploy from `website-branch` to root directory (`/`)
+
+### Manual Trigger
+
+You can also manually trigger deployment from GitHub:
+1. Go to **Actions** tab in your repository
+2. Click on **Deploy to GitHub Pages** workflow
+3. Click **Run workflow** → **Run workflow**
 
 ## 📁 Project Structure
 
