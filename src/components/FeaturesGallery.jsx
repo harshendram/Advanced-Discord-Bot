@@ -181,7 +181,20 @@ const FeaturesGallery = () => {
           src={feature.image}
           alt={feature.title}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+          onError={(e) => {
+            console.error(`Failed to load image: ${feature.image}`);
+            e.target.style.display = 'none';
+            e.target.nextSibling.style.display = 'flex';
+          }}
         />
+        
+        {/* Fallback when image fails to load */}
+        <div className="hidden w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 items-center justify-center">
+          <div className="text-center text-gray-400">
+            <div className="text-4xl mb-2">🖼️</div>
+            <p className="text-sm">{feature.title}</p>
+          </div>
+        </div>
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
@@ -272,7 +285,7 @@ const FeaturesGallery = () => {
   );
 
   return (
-    <section className="py-20 bg-gray-900 relative overflow-hidden">
+    <section id="Features" className="py-20 bg-gray-900 relative overflow-hidden">
       {/* Header */}
       <div className="text-center mb-16 px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
