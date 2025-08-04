@@ -82,6 +82,7 @@ The site will automatically deploy to: `https://harshendram.github.io/Advanced-D
 ### Manual Trigger
 
 You can also manually trigger deployment from GitHub:
+
 1. Go to **Actions** tab in your repository
 2. Click on **Deploy to GitHub Pages** workflow
 3. Click **Run workflow** → **Run workflow**
