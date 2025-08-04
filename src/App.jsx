@@ -1,5 +1,4 @@
 import React, { Suspense } from "react";
-import ErrorBoundary from "./components/ErrorBoundary";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Installation from "./components/Installation";
@@ -20,40 +19,19 @@ const LoadingSpinner = () => (
 
 const App = () => {
   return (
-    <ErrorBoundary>
-      <div className="relative">
-        {/* Global Snowfall Effect */}
-        <ErrorBoundary>
-          <ExpressionBalls />
-        </ErrorBoundary>
+    <div className="relative">
+      {/* Global Snowfall Effect */}
+      <ExpressionBalls />
 
-        <Suspense fallback={<LoadingSpinner />}>
-          <ErrorBoundary>
-            <Navbar />
-          </ErrorBoundary>
-
-          <ErrorBoundary>
-            <About />
-          </ErrorBoundary>
-
-          <ErrorBoundary>
-            <Installation />
-          </ErrorBoundary>
-
-          <ErrorBoundary>
-            <FeaturesGallery />
-          </ErrorBoundary>
-
-          <ErrorBoundary>
-            <TechStack />
-          </ErrorBoundary>
-
-          <ErrorBoundary>
-            <Footer />
-          </ErrorBoundary>
-        </Suspense>
-      </div>
-    </ErrorBoundary>
+      <Suspense fallback={<LoadingSpinner />}>
+        <Navbar />
+        <About />
+        <Installation />
+        <FeaturesGallery />
+        <TechStack />
+        <Footer />
+      </Suspense>
+    </div>
   );
 };
 
