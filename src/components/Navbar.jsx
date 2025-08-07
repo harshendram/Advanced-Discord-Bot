@@ -124,12 +124,13 @@ const Navbar = () => {
           {/* Logo */}
           <div
             onClick={() => handleMenuItemClick("Home")}
-            className="text-xl font-bold cursor-pointer group transition-all duration-300 hover:scale-110 mr-8"
+            className="text-xl font-bold cursor-pointer group transition-all duration-300 hover:scale-110"
           >
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-[#2ee6f7] to-[#2ee6f7] blur-lg opacity-30 group-hover:opacity-60 transition-opacity duration-300 rounded-lg"></div>
-              <div className="relative px-4 py-2">
+              <div className="relative px-3 py-1">
                 <span className="text-[#2ee6f7] drop-shadow-[0_0_8px_#2ee6f7]">
+                  {" "}
                   &lt;
                 </span>
                 <span className="text-white font-extrabold bg-gradient-to-r from-white to-[#2ee6f7] bg-clip-text">
@@ -147,8 +148,8 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu - Navigation + Social Links */}
-          <div className="hidden md:flex items-center space-x-8 flex-1 justify-end">
-            <ul className="flex items-center space-x-8 text-gray-300">
+          <div className="hidden md:flex items-center space-x-8">
+            <ul className="flex items-center space-x-6 text-gray-300">
             {menuItems.map((item) => (
               <li key={item.id} className="relative group">
                 <button
@@ -169,7 +170,7 @@ const Navbar = () => {
             </ul>
 
             {/* Social Links */}
-            <div className="flex items-center space-x-4 ml-6">
+            <div className="flex items-center space-x-4">
               <a
                 href="https://github.com/harshendram/Advanced-Discord-Bot"
                 target="_blank"
